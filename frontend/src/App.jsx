@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     axios.get('/api/items')
       .then(res => {
-        console.log(res.data)
+        console.log(JSON.stringify(res.data))
         setItems(res.data)
       }).catch(err => {
         console.log(err)
@@ -30,6 +30,8 @@ function App() {
           </div>
         })
       }
+      <button><a href="http://localhost:3000/login">login</a></button>
+      <button><a href="http://localhost:3000/logout">logout</a></button>
     </>
   )
 }
