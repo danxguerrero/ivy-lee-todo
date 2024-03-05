@@ -1,4 +1,5 @@
-require('dotenv').config('.env')
+require('dotenv').config('.env');
+const { taskRouter } = require('./routes')
 const express = require('express');
 const app = express();
 const { auth } = require('express-openid-connect')
@@ -19,6 +20,8 @@ const config = {
 }
 
 app.use(auth(config))
+
+app.use("/api/tasks", taskRouter);
 
 app.get('/api/items', async (req, res) => {
     res.send([{
