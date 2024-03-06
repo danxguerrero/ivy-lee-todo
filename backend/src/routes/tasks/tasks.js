@@ -21,4 +21,14 @@ router.get('/', async (req, res, next) => {
     }
 });
 
+router.put('/', async (req, res, next) => {
+    const {id} = req.user;
+    const { task } = req.body;
+    try{
+        const newTask = await Task.create(task)
+    } catch(error) {
+        next(error)
+    }
+})
+
 module.exports = router;

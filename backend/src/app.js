@@ -3,9 +3,9 @@ const { taskRouter } = require('./routes')
 const express = require('express');
 const app = express();
 const { auth } = require('express-openid-connect')
+const { userAuth } = require('./middleware')
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
 
 const { AUTH0_SECRET, AUTH0_AUDIENCE, AUTH0_CLIENT_ID, AUTH0_BASE_URL } =
   process.env
@@ -20,6 +20,11 @@ const config = {
 }
 
 app.use(auth(config))
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(userAuth);
 
 app.use("/api/tasks", taskRouter);
 
