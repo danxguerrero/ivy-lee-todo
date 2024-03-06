@@ -3,7 +3,7 @@ const { taskRouter } = require('./routes')
 const express = require('express');
 const app = express();
 const { auth } = require('express-openid-connect')
-const { userAuth } = require('./middleware')
+const { userAuth } = require('/Users/danielguerrero/Desktop/ivy-lee-todo/backend/src/middleware/index,js')
 
 
 
