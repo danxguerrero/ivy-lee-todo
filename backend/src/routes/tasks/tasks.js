@@ -1,6 +1,6 @@
 const express = require('express')
 const { Task } = require('../../../models')
-const { requiresAuth } = require('express-openid-connect')
+
 
 const router = express.Router()
 
@@ -66,7 +66,7 @@ router.delete('/:taskId', async (req, res, next) => {
 router.put(':/taskId', async (req, res, next) => {
     const { taskId } = req.params
 
-    try { 
+    try {
         const taskToUpdate = await Task.findByPk(taskId)
         if (!taskToUpdate) {
             return res.sendStatus(404)
@@ -74,7 +74,7 @@ router.put(':/taskId', async (req, res, next) => {
 
         const updatedTask = await Task.update(req.body)
         res.json(updatedTask)
-        
+
     } catch (error) {
         next(error)
     }
