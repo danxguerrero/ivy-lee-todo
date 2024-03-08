@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button"
 
 const App = () => {
   const [areTasksVisible, setAreTasksVisible] = useState(true);
@@ -23,7 +24,11 @@ const App = () => {
   return (
     <>
       <main>
-        <Navbar>Todo</Navbar>
+        <Navbar bg="dark" data-bs-theme="dark">
+          <Container>
+            <Navbar.Brand>Ivy Lee Todo</Navbar.Brand>
+          </Container>
+        </Navbar>
       </main>
     </>
   )
