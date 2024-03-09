@@ -24,7 +24,7 @@ const App = () => {
   return (
     <>
       <main>
-        <Navbar bg="dark" data-bs-theme="dark">
+        <Navbar bg="dark" data-bs-theme="dark" expand="lg" fixed="top">
           <Container>
             <Navbar.Brand>Ivy Lee Todo</Navbar.Brand>
           </Container>
