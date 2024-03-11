@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { TaskList} from "./components/TaskList";
+
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
@@ -29,6 +31,11 @@ const App = () => {
             <Navbar.Brand>Ivy Lee Todo</Navbar.Brand>
           </Container>
         </Navbar>
+
+        <TaskList
+          tasks={tasks}
+          setAreTasksVisible={setAreTasksVisible}
+        />
       </main>
     </>
   )
