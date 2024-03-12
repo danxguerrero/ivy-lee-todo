@@ -13,10 +13,14 @@ const App = () => {
   const [areTasksVisible, setAreTasksVisible] = useState(true);
   const [tasks, setTasks] = useState([]);
 
-  const getTasks = async () => {
-    const response = await fetch('/api/items');
-    const tasksData = await response.json();
-    setTasks(tasksData);
+  async function getTasks() {
+    try {    
+      const response = await fetch('/api/items');
+      const tasksData = await response.json();
+      setTasks(tasksData);
+    } catch (error) {
+      console.log("Oh no, an error!", error);
+    }
   }
 
   useEffect(() => {
