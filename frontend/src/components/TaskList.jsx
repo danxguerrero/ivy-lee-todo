@@ -12,7 +12,7 @@ export const TaskList = ({
     return (
 
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <Card className='p-4' style={{ width: '600px'}}>
+            <Card className='p-4' style={{ width: '800px', height: '1000px'}}>
                 <Card.Body>
                     <Card.Title>Tasks</Card.Title>
                     <ListGroup>
