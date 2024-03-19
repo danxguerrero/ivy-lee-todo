@@ -44,11 +44,15 @@ const App = () => {
             <Offcanvas.Title>Menu</Offcanvas.Title>
           </Offcanvas.Header>
         </Offcanvas>
-        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <TaskList
-          tasks={tasks}
-          setAreTasksVisible={setAreTasksVisible}
-        />
+        <Container style={{ display: 'flex', justifyContent: 'row', alignItems: 'center', height: '100vh' }}>
+          <Row>
+            <Col>
+              <TaskList
+                tasks={tasks}
+                setAreTasksVisible={setAreTasksVisible}
+              />
+            </Col>
+          </Row>
         </Container>
       </main>
     </>
