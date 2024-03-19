@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { TaskList} from "./components/TaskList";
 
 
-import { Navbar, Container, Card, Button, Offcanvas, Col, Row} from "react-bootstrap";
+import { Navbar, Nav, Container, Card, Button, Offcanvas, Col, Row} from "react-bootstrap";
 
 const App = () => {
   const [areTasksVisible, setAreTasksVisible] = useState(true);
@@ -32,16 +32,16 @@ const App = () => {
   return (
     <>
       <main>
-        <Navbar bg="dark" data-bs-theme="dark" expand="lg" fixed="top">
-          <Container>
+        <Navbar bg="dark" data-bs-theme="dark" expand="lg" fixed="top" >
+          <Container style={{ display: 'flex', justifyContent:'start', marginLeft:'1em'}}>
             <Button variant="dark" onClick={handleShow}>Menu</Button>
-            <Navbar.Brand>Ivy Lee Todo</Navbar.Brand>
+            <Navbar.Brand>Todo</Navbar.Brand>
           </Container>
         </Navbar>
 
         <Offcanvas show={showOffcanvas} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Menu</Offcanvas.Title>
+            <Offcanvas.Title>Todo</Offcanvas.Title>
           </Offcanvas.Header>
         </Offcanvas>
         <Container style={{ display: 'flex', justifyContent: 'row', alignItems: 'center', height: '100vh' }}>
