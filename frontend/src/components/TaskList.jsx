@@ -11,8 +11,8 @@ export const TaskList = ({
 
     return (
 
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <Card className='p-4' style={{ width: '800px', height: '1000px'}}>
+        <div>
+            <Card className='p-4' style={{ width: '900px', height: '1100px'}}>
                 <Card.Body>
                     <Card.Title>Tasks</Card.Title>
                     <Accordion defaultActiveKey="0">

@@ -4,11 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { TaskList} from "./components/TaskList";
 
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button"
-import Offcanvas from "react-bootstrap/Offcanvas"
+
+import { Navbar, Container, Card, Button, Offcanvas, Col, Row} from "react-bootstrap";
 
 const App = () => {
   const [areTasksVisible, setAreTasksVisible] = useState(true);
@@ -47,11 +44,12 @@ const App = () => {
             <Offcanvas.Title>Menu</Offcanvas.Title>
           </Offcanvas.Header>
         </Offcanvas>
-
+        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <TaskList
           tasks={tasks}
           setAreTasksVisible={setAreTasksVisible}
         />
+        </Container>
       </main>
     </>
   )
