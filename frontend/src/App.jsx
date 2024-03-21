@@ -36,6 +36,7 @@ const App = () => {
           <Container style={{ display: 'flex', justifyContent:'start', marginLeft:'1em'}}>
             <Button variant="dark" onClick={handleShow}>Menu</Button>
             <Navbar.Brand>Todo</Navbar.Brand>
+            <Button variant='dark' href="http://localhost:3000/login">Login</Button>
           </Container>
         </Navbar>
 
