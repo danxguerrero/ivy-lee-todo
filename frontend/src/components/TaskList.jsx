@@ -18,11 +18,24 @@ export const TaskList = ({
                     <Container>
                         <Row>
                             <Col>
+                                <Card>
+                                    <Card.Title>Ready</Card.Title>
+                                </Card>
                             {
                                 tasks.map((task) => {
                                     return <Task task={task} key={task.id}/>
                                 })
                             }
+                            </Col>
+                            <Col>
+                                <Card>
+                                    <Card.Title>In Progress</Card.Title>
+                                </Card>
+                            </Col>
+                            <Col>
+                                <Card>
+                                    <Card.Title>Completed</Card.Title>
+                                </Card>
                             </Col>
                         </Row>
                     </Container>
