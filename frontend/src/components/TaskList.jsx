@@ -18,22 +18,23 @@ export const TaskList = ({
                     <Container>
                         <Row>
                             <Col>
-                                <Card>
+                                <Card style={{height: '1000px', display: 'flex', alignItems: 'center'}}>
                                     <Card.Title>Ready</Card.Title>
-                                </Card>
+                                
                             {
                                 tasks.map((task) => {
                                     return <Task task={task} key={task.id}/>
                                 })
                             }
+                                </Card>
                             </Col>
                             <Col>
-                                <Card>
+                                <Card style={{ height: '200px', display: 'flex', alignItems: 'center'}}>
                                     <Card.Title>In Progress</Card.Title>
                                 </Card>
                             </Col>
                             <Col>
-                                <Card>
+                                <Card style={{ height: '1000px', display: 'flex', alignItems: 'center'}}>
                                     <Card.Title>Completed</Card.Title>
                                 </Card>
                             </Col>

@@ -5,7 +5,7 @@ export const Task = ({task}) => {
 
     
     return (
-        <Card>
+        <Card style={{width: '80%'}}>
             <Card.Title>{task.title}</Card.Title>
             <Card.Body>This is a body.</Card.Body>
         </Card>
