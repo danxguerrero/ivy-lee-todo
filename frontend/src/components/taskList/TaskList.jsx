@@ -1,4 +1,5 @@
 import {Task} from "../task/Task"
+import "./taskList.css";
 
 import { Card, Container, Col, Row } from "react-bootstrap";
 
@@ -10,15 +11,14 @@ export const TaskList = ({
 }) => {
 
     return (
-
-        <div>
-            <Card className='p-4' style={{ width: '900px', height: '1100px'}}>
+        <div style={{ height:'80vh' }}>
+            <Card style={{ width: '900px', height: '100%'}}>
                 <Card.Body>
                     <Card.Title>Tasks</Card.Title>
                     <Container className='task-container'>
                         <Row>
                             <Col>
-                                <Card style={{height: '1000px', display: 'flex', alignItems: 'center'}}>
+                                <Card style={{ height: '100%', display: 'flex', alignItems: 'center' }}>
                                     <Card.Title>Ready</Card.Title>
                                 
                             {
@@ -29,12 +29,12 @@ export const TaskList = ({
                                 </Card>
                             </Col>
                             <Col>
-                                <Card style={{ height: '200px', display: 'flex', alignItems: 'center'}}>
+                                <Card style={{ height: '30%', display: 'flex', alignItems: 'center'}}>
                                     <Card.Title>In Progress</Card.Title>
                                 </Card>
                             </Col>
                             <Col>
-                                <Card style={{ height: '1000px', display: 'flex', alignItems: 'center'}}>
+                                <Card style={{ height: '70vh', display: 'flex', alignItems: 'center'}}>
                                     <Card.Title>Completed</Card.Title>
                                 </Card>
                             </Col>
