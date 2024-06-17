@@ -1,4 +1,4 @@
-import {Task} from "./Task"
+import {Task} from "../task/Task"
 
 import { Card, Container, Col, Row } from "react-bootstrap";
 
@@ -15,7 +15,7 @@ export const TaskList = ({
             <Card className='p-4' style={{ width: '900px', height: '1100px'}}>
                 <Card.Body>
                     <Card.Title>Tasks</Card.Title>
-                    <Container>
+                    <Container className='task-container'>
                         <Row>
                             <Col>
                                 <Card style={{height: '1000px', display: 'flex', alignItems: 'center'}}>

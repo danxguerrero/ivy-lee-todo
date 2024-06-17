@@ -16,8 +16,8 @@
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   background-image: 
     linear-gradient(to bottom right, #fffacd, #b0c4de, #ffa07a),
     linear-gradient(to bottom left,  #98fb98, #b0c4de, #ffa07a),

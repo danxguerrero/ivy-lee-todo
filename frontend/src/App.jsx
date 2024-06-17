@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { TaskList} from "./components/TaskList";
+import { TaskList} from "./components/taskList/TaskList";
 
 
 import { Navbar, Nav, Container, Card, Button, Offcanvas, Col, Row} from "react-bootstrap";
