@@ -10,6 +10,7 @@ import { Navbar, Nav, Container, Card, Button, Offcanvas, Col, Row} from "react-
 const App = () => {
   const [areTasksVisible, setAreTasksVisible] = useState(true);
   const [tasks, setTasks] = useState([]);
+  const [user, setUser] = useState('');
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
   const handleClose = () => setShowOffcanvas(false);
@@ -25,6 +26,20 @@ const App = () => {
     }
   }
 
+  async function getUser() {
+    try {
+      const response = await fetch('/api/users/');
+      const userData = await response.json();
+      setUser(userData?.user.email)
+    } catch (error) {
+      console.log("There was an error getting user data: ", error);
+    }
+  }
+
+  useEffect(() => {
+    getUser()
+  }, [user])
+
   useEffect(() => {
     getTasks()
   }, [])
@@ -36,7 +51,9 @@ const App = () => {
           <Container style={{ display: 'flex', justifyContent:'start', marginLeft:'1em'}}>
             <Button variant="dark" onClick={handleShow}>Menu</Button>
             <Navbar.Brand>Todo</Navbar.Brand>
-            <Button variant='dark' href="http://localhost:3000/login">Login</Button>
+            { !user ? <Button variant='dark' href="http://localhost:3000/login">Login</Button> :  <Button variant='dark' href="http://localhost:3000/logout">Log Out</Button>
+            
+            }
           </Container>
         </Navbar>
 

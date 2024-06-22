@@ -1,5 +1,5 @@
 require('dotenv').config('.env');
-const { taskRouter } = require('./routes')
+const { taskRouter, userRouter } = require('./routes')
 const express = require('express');
 const app = express();
 const { auth } = require('express-openid-connect')
