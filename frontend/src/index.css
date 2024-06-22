@@ -23,7 +23,7 @@ body {
     linear-gradient(to bottom left,  #98fb98, #b0c4de, #ffa07a),
     linear-gradient(to top right, #98fb98, #b0c4de, #ffa07a),
     linear-gradient(to top left, #ffa07a, #b0c4de, #ffa07a);
-  background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  background-size: 51% 51%, 50% 51%, 50% 50%, 51% 50%;
   background-position: top left, top right, bottom left, bottom right;
   background-repeat: no-repeat;
 }
