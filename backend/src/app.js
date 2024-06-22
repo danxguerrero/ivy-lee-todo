@@ -27,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(userAuth);
 
 app.use("/api/tasks", taskRouter);
+app.use("/api/users", userRouter)
 
 app.get('/api/items', async (req, res) => {
     res.send([{
