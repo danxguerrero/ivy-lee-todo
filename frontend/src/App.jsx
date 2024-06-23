@@ -49,7 +49,11 @@ const App = () => {
       <main>
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" fixed="top" >
           <Container style={{ display: 'flex', justifyContent:'start', marginLeft:'1em'}}>
-            <Button variant="dark" onClick={handleShow}>Menu</Button>
+            <Button variant="dark" onClick={handleShow}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </Button>
             <Navbar.Brand>Todo</Navbar.Brand>
             { !user ? <Button variant='dark' href="http://localhost:3000/login">Login</Button> :  <Button variant='dark' href="http://localhost:3000/logout">Log Out</Button>
             
@@ -61,6 +65,8 @@ const App = () => {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Todo</Offcanvas.Title>
           </Offcanvas.Header>
+          <Offcanvas.Body>
+          </Offcanvas.Body>
         </Offcanvas>
         <Container style={{ display: 'flex', justifyContent: 'row', alignItems: 'center', height: '100vh' }}>
           <Row>
