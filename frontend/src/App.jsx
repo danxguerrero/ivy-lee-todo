@@ -66,6 +66,7 @@ const App = () => {
             <Offcanvas.Title>Todo</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
+            <a><p>New Task</p></a>
           </Offcanvas.Body>
         </Offcanvas>
         <Container style={{ display: 'flex', justifyContent: 'row', alignItems: 'center', height: '100vh' }}>
